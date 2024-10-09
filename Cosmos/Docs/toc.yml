@@ -1,0 +1,15 @@
+- name: Home
+  href: index.md
+- name: Install
+  href: articles/Installation/UserKit.md
+- name: Cosmos Website
+  href: https://gocosmos.org
+- name: Articles
+  href: articles/
+  homepage: articles/GettingStarted.md
+- name: Cosmos
+  href: api/cosmos/
+- name: X#
+  href: api/xsharp/
+- name: IL2CPU
+  href: api/il2cpu/

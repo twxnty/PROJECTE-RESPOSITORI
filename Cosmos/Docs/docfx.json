@@ -1,0 +1,142 @@
+{
+    "metadata": [
+        {
+            "src": [
+                {
+                    "files": [
+                        "IL2CPU/source/IL2CPU/IL2CPU.csproj",
+                        "IL2CPU/source/IL2CPU.API/IL2CPU.API.csproj",
+                        "IL2CPU/source/Cosmos.IL2CPU/Cosmos.IL2CPU.csproj"
+                    ],
+                    "exclude": [
+                        "**/bin/**",
+                        "**/obj/**"
+                    ],
+                    "src": "../../"
+                }
+            ],
+            "dest": "api/il2cpu"
+        },
+        {
+            "src": [
+                {
+                    "files": [
+                        "XSharp/source/XSharp/XSharp/XSharp.csproj"
+                    ],
+                    "exclude": [
+                        "**/bin/**",
+                        "**/obj/**"
+                    ],
+                    "src": "../../"
+                }
+            ],
+            "dest": "api/xsharp"
+        },
+        {
+            "src": [
+                {
+                    "files": [
+                        "source/Cosmos.Core/Cosmos.Core.csproj",
+                        "source/Cosmos.Core_Asm/Cosmos.Core_Asm.csproj",
+                        "source/Cosmos.HAL2/Cosmos.HAL2.csproj",
+                        "source/Cosmos.System2/Cosmos.System2.csproj",
+                        "source/Cosmos.Debug.Kernel/Cosmos.Debug.Kernel.csproj",
+                    ],
+                    "exclude": [
+                        "**/bin/**",
+                        "**/obj/**"
+                    ],
+                    "src": "../"
+                }
+            ],
+            "dest": "api/cosmos"
+        },
+        {
+            "src": [
+                {
+                    "files": [
+                        "source/Cosmos.Core_Plugs/Cosmos.Core_Plugs.csproj",
+                        "source/Cosmos.HAL2/Cosmos.HAL2.csproj",
+                        "source/Cosmos.System2_Plugs/Cosmos.System2_Plugs.csproj"
+                    ],
+                    "exclude": [
+                        "**/bin/**",
+                        "**/obj/**"
+                    ],
+                    "src": "../"
+                }
+            ],
+            "dest": "api/plugs"
+        }
+    ],
+    "build": {
+        "content": [
+            {
+                "files": [
+                    "**/*.yml"
+                ],
+                "src": "api",
+                "dest": "api"
+            },
+            {
+                "files": [
+                    "**/*.yml"
+                ],
+                "src": "api/cosmos",
+                "dest": "api/cosmos"
+            },
+            {
+                "files": [
+                    "**/*.yml"
+                ],
+                "src": "api/plugs",
+                "dest": "api/plugs"
+            },
+            {
+                "files": [
+                    "**/*.md",
+                    "*.md",
+                    "toc.yml"
+                ]
+            }
+        ],
+        "resource": [
+            {
+                "files": [
+                    "favicon.ico",
+                    "images/**",
+                    "articles/images/**"
+                ]
+            }
+        ],
+        "overwrite": [
+            {
+                "files": [
+                    "apidoc/**.md"
+                ],
+                "exclude": [
+                    "obj/**",
+                    "_site/**"
+                ]
+            }
+        ],
+        "dest": "_site",
+        "globalMetadata": {
+            "_appFooter": "<span></span>",
+            "_appLogoPath": "images/logo.png",
+            "_enableNewTab": true
+        },
+        "globalMetadataFiles": [],
+        "fileMetadataFiles": [],
+        "template": [
+            "statictoc",
+            "templates/darkfx"
+        ],
+        "postProcessors": [],
+        "markdownEngineName": "markdig",
+        "noLangKeyword": false,
+        "keepFileLink": false,
+        "cleanupCacheHistory": false,
+        "disableGitFeatures": false
+    }
+}
